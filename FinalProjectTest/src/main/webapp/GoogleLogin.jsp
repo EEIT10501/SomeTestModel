@@ -25,7 +25,7 @@
 					+ profile.getImageUrl() + '<br>Email: '
 					+ profile.getEmail() + '<br>id_token:' + id_token;
 			// 傳回後臺驗證，並獲取userid，可改用jQuery、AJAX
-			// Controller寫法參考 https://www.itread01.com/content/1541820309.html
+			// 後端要使用API驗證id_token才可得到客戶識別ID，Controller寫法參考 https://www.itread01.com/content/1541820309.html
 			// var id_token = googleUser.getAuthResponse().id_token;
 			// console.log("ID Token: " + id_token);
 			// var xhr = new XMLHttpRequest();
