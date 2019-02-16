@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <Context>
-	<Resource name="jdbc/FinalProjectTestSQLServer"
-		type="javax.sql.DataSource" username="sa" password="passw0rd"
+	<Resource name="jdbc/funwork" type="javax.sql.DataSource"
+		username="sa" password="passw0rd"
 		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-		url="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=JSPDB" maxActive="8"
-		maxIdle="4" maxWait="5000" />
+		url="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=funwork"
+		maxActive="8" maxIdle="4" maxWait="5000" />
 </Context>
