@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Job {
@@ -24,12 +25,15 @@ public class Job {
 	private String failReason;
 	private Boolean isExposure;
 	private User user;
+	private JobDetail jobDetail;
+	private Schedule schedule;
 
 	public Job() {
 	}
 
 	public Job(Integer jobId, String title, Date postEndDate, Boolean isFilled, Integer viewTimes, Integer applicant,
-			String comment, Integer reviewStatus, String failReason, Boolean isExposure, User user) {
+			String comment, Integer reviewStatus, String failReason, Boolean isExposure, User user, JobDetail jobDetail,
+			Schedule schedule) {
 		super();
 		this.jobId = jobId;
 		this.title = title;
@@ -42,13 +46,16 @@ public class Job {
 		this.failReason = failReason;
 		this.isExposure = isExposure;
 		this.user = user;
+		this.jobDetail = jobDetail;
+		this.schedule = schedule;
 	}
 
 	@Override
 	public String toString() {
 		return "Job [jobId=" + jobId + ", title=" + title + ", postEndDate=" + postEndDate + ", isFilled=" + isFilled
 				+ ", viewTimes=" + viewTimes + ", applicant=" + applicant + ", comment=" + comment + ", reviewStatus="
-				+ reviewStatus + ", failReason=" + failReason + ", isExposure=" + isExposure + ", user=" + user + "]";
+				+ reviewStatus + ", failReason=" + failReason + ", isExposure=" + isExposure + ", user=" + user
+				+ ", jobDetail=" + jobDetail + ", schedule=" + schedule + "]";
 	}
 
 	@Id
@@ -141,6 +148,24 @@ public class Job {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	@OneToOne(mappedBy = "job")
+	public JobDetail getJobDetail() {
+		return jobDetail;
+	}
+
+	public void setJobDetail(JobDetail jobDetail) {
+		this.jobDetail = jobDetail;
+	}
+
+	@OneToOne(mappedBy = "job")
+	public Schedule getSchedule() {
+		return schedule;
+	}
+
+	public void setSchedule(Schedule schedule) {
+		this.schedule = schedule;
 	}
 
 }

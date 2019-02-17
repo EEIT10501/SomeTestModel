@@ -33,6 +33,8 @@
 		<!-- 3. 宣告程式使用的永續類別 -->
 		<mapping class="model.User"></mapping>
 		<mapping class="model.Job"></mapping>
+		<mapping class="model.JobDetail"></mapping>
+		<mapping class="model.Schedule"></mapping>
 
 	</session-factory>
 </hibernate-configuration>
