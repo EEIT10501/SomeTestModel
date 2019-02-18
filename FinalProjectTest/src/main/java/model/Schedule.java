@@ -23,21 +23,6 @@ public class Schedule {
 	public Schedule() {
 	}
 
-	public Schedule(Integer scheduleId, Date workDate, Time startTime, Time endTime, Job job) {
-		super();
-		this.scheduleId = scheduleId;
-		this.workDate = workDate;
-		this.startTime = startTime;
-		this.endTime = endTime;
-		this.job = job;
-	}
-
-	@Override
-	public String toString() {
-		return "Schedule [scheduleId=" + scheduleId + ", workDate=" + workDate + ", startTime=" + startTime
-				+ ", endTime=" + endTime + "]";
-	}
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getScheduleId() {

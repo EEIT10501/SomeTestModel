@@ -1,6 +1,8 @@
 package model;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -27,35 +30,9 @@ public class Job {
 	private User user;
 	private JobDetail jobDetail;
 	private Schedule schedule;
+	private List<Application> application = new ArrayList<Application>();
 
 	public Job() {
-	}
-
-	public Job(Integer jobId, String title, Date postEndDate, Boolean isFilled, Integer viewTimes, Integer applicant,
-			String comment, Integer reviewStatus, String failReason, Boolean isExposure, User user, JobDetail jobDetail,
-			Schedule schedule) {
-		super();
-		this.jobId = jobId;
-		this.title = title;
-		this.postEndDate = postEndDate;
-		this.isFilled = isFilled;
-		this.viewTimes = viewTimes;
-		this.applicant = applicant;
-		this.comment = comment;
-		this.reviewStatus = reviewStatus;
-		this.failReason = failReason;
-		this.isExposure = isExposure;
-		this.user = user;
-		this.jobDetail = jobDetail;
-		this.schedule = schedule;
-	}
-
-	@Override
-	public String toString() {
-		return "Job [jobId=" + jobId + ", title=" + title + ", postEndDate=" + postEndDate + ", isFilled=" + isFilled
-				+ ", viewTimes=" + viewTimes + ", applicant=" + applicant + ", comment=" + comment + ", reviewStatus="
-				+ reviewStatus + ", failReason=" + failReason + ", isExposure=" + isExposure + ", user=" + user
-				+ ", jobDetail=" + jobDetail + ", schedule=" + schedule + "]";
 	}
 
 	@Id
@@ -166,6 +143,15 @@ public class Job {
 
 	public void setSchedule(Schedule schedule) {
 		this.schedule = schedule;
+	}
+
+	@OneToMany(mappedBy = "job", cascade = CascadeType.ALL)
+	public List<Application> getApplication() {
+		return application;
+	}
+
+	public void setApplication(List<Application> applications) {
+		application = applications;
 	}
 
 }

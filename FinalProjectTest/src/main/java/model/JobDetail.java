@@ -31,38 +31,6 @@ public class JobDetail {
 	public JobDetail() {
 	}
 
-	public JobDetail(Integer jobDetailId, Boolean isCompany, Boolean isLongTerm, String description, String other,
-			Boolean isRemote, String address, String addressSup, String city, String paidDate, Integer rateByHour,
-			String phone, String email, String contact, String industry, Integer positionNum, Job job) {
-		super();
-		this.jobDetailId = jobDetailId;
-		this.isCompany = isCompany;
-		this.isLongTerm = isLongTerm;
-		this.description = description;
-		this.other = other;
-		this.isRemote = isRemote;
-		this.address = address;
-		this.addressSup = addressSup;
-		this.city = city;
-		this.paidDate = paidDate;
-		this.rateByHour = rateByHour;
-		this.phone = phone;
-		this.email = email;
-		this.contact = contact;
-		this.industry = industry;
-		this.positionNum = positionNum;
-		this.job = job;
-	}
-
-	@Override
-	public String toString() {
-		return "JobDetail [jobDetailId=" + jobDetailId + ", isCompany=" + isCompany + ", isLongTerm=" + isLongTerm
-				+ ", description=" + description + ", other=" + other + ", isRemote=" + isRemote + ", address="
-				+ address + ", addressSup=" + addressSup + ", city=" + city + ", paidDate=" + paidDate + ", rateByHour="
-				+ rateByHour + ", phone=" + phone + ", email=" + email + ", contact=" + contact + ", industry="
-				+ industry + ", positionNum=" + positionNum + "]";
-	}
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getJobDetailId() {

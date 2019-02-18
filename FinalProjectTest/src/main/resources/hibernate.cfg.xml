@@ -17,7 +17,7 @@
 
 		<!-- 2. 其他與資料存取有關的設定 -->
 		<!-- 自動產生資料庫的Schema -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		<!-- 顯示實際操作資料庫時的SQL -->
 		<property name="show_sql">true</property>
 		<!-- 將顯示的SQL排版，方便觀看 -->
@@ -35,6 +35,20 @@
 		<mapping class="model.Job"></mapping>
 		<mapping class="model.JobDetail"></mapping>
 		<mapping class="model.Schedule"></mapping>
+		<mapping class="model.Order"></mapping>
+		<mapping class="model.Product"></mapping>
+		<mapping class="model.Application"></mapping>
+		<mapping class="model.Interview"></mapping>
+		<mapping class="model.Attendence"></mapping>
+		<mapping class="model.Message"></mapping>
+		<mapping class="model.Company"></mapping>
+		<mapping class="model.CompanyDetail"></mapping>
+		<mapping class="model.Complaint"></mapping>
+		<mapping class="model.Resume"></mapping>
+		<mapping class="model.Experience"></mapping>
+		<mapping class="model.Notification"></mapping>
+		<mapping class="model.Salary"></mapping>
+		<mapping class="model.Suggestion"></mapping>
 
 	</session-factory>
 </hibernate-configuration>

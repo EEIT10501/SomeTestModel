@@ -28,32 +28,6 @@ public class User {
 	public User() {
 	}
 
-	public User(Integer userId, String email, String password, String phoneNum, String facebook, String google,
-			Integer role, Integer membershipLevel, Integer jobPostLimit, Integer exposureLimit, Integer jobPostPeriod,
-			Integer absence, Double rating) {
-		this.userId = userId;
-		this.email = email;
-		this.password = password;
-		this.phoneNum = phoneNum;
-		this.facebook = facebook;
-		this.google = google;
-		this.role = role;
-		this.membershipLevel = membershipLevel;
-		this.jobPostLimit = jobPostLimit;
-		this.exposureLimit = exposureLimit;
-		this.jobPostPeriod = jobPostPeriod;
-		this.absence = absence;
-		this.rating = rating;
-	}
-
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", email=" + email + ", password=" + password + ", phoneNum=" + phoneNum
-				+ ", facebook=" + facebook + ", google=" + google + ", role=" + role + ", membershipLevel="
-				+ membershipLevel + ", jobPostLimit=" + jobPostLimit + ", exposureLimit=" + exposureLimit
-				+ ", jobPostPeriod=" + jobPostPeriod + ", absence=" + absence + ", rating=" + rating + "]";
-	}
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getUserId() {

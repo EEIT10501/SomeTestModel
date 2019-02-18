@@ -1,15 +1,7 @@
 package test;
 
-import java.sql.Date;
-import java.sql.Time;
-
-import model.Job;
-import model.JobDetail;
-import model.Schedule;
 import model.User;
-import service.JobServiceInter;
 import service.UserServiceInter;
-import service.impl.JobServiceImpl;
 import service.impl.UserServiceImpl;
 
 public class TestApp {
@@ -17,10 +9,10 @@ public class TestApp {
 	public static void main(String[] args) {
 
 		UserServiceInter userService = new UserServiceImpl();
-
+//
 //		User user = new User(null, "sam810331@gmail.com", "12345678", "0918500406", null, null, 2, 1, 3, 0,
 //				1000 * 60 * 60 * 24 * 7, 0, null);
-//
+
 //		userService.saveUser(user);
 
 		User user = userService.getUserById(1);
@@ -28,8 +20,8 @@ public class TestApp {
 //		System.out.println(user);
 //		userService.updateUser(user);
 
-		JobServiceInter jobService = new JobServiceImpl();
-
+//		JobServiceInter jobService = new JobServiceImpl();
+//
 //		Job job = new Job();
 //		job.setTitle("賣場促銷");
 //		job.setPostEndDate(Date.valueOf("2019-2-20"));
@@ -65,8 +57,7 @@ public class TestApp {
 //		schedule.setEndTime(Time.valueOf("19:00:00"));
 //
 //		jobService.saveJob(job, jobDetail, schedule);
-		
-		
+
 	}
 
 }
