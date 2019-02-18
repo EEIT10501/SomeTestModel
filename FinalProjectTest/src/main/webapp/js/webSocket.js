@@ -70,7 +70,8 @@ window.onload = function() {
 		// onmessage , 接收到來自Server的訊息時觸發
 		webSocket.onmessage = function(event) {
 			var messageObject = JSON.parse(event.data);
-			messageDisplay.innerHTML += "" + messageObject.userName + " 說 : "
+			messageDisplay.inner
+			HTML += "" + messageObject.userName + " 說 : "
 					+ messageObject.message + "<br>";
 		};
 	}
